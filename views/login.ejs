@@ -1,0 +1,24 @@
+<div class="container login-container">
+    <div class="jumbotron">
+        <div class="container header-container">
+            <p id="login-text">Login</p>
+        </div>
+        <%- include ("./partials/messages") %>
+        <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Email Address</label>
+              <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Another input"
+              value="<%= typeof email != 'undefined'? name : '' %>"
+              >
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Enter Password</label>
+                <input type="password" name="password"  class="form-control" id="formGroupExampleInput" placeholder="Example input"
+                value="<%= typeof password != 'undefined'? name : '' %>"
+                >
+            </div>
+            <button type="submit" class="btn register-button btn-success">Submit</button>
+          </form>
+          <p id="base-text">Don't have an Account? <a href="/register">Register Now</a></p>
+    </div>
+</div>

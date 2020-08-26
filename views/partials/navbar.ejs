@@ -1,0 +1,19 @@
+
+<div class="navbar-partial">
+    <header class="navigation">
+        <span class="title-text"><p>Inventory Test System</p></span>
+    </header>
+    <nav class="navigation-bar">
+        <ul id="navigation-list">
+            <% if (req.user.role === 'Administrator' || req.user.role === 'Seller') {%>
+            <li class="nav-list-item"><a href="/auth/dashboard">Dashboard</a></li>
+            <% } %>
+            <li class="nav-list-item"><a href="/auth/products-view-only">Products</a></li>
+            <li class="nav-list-item">Logged in as <%=req.user.name%> </li>
+            <li class="nav-list-item"><a href="/logout">Logout</a></li>
+            
+        </ul>
+    </nav>
+    
+</div>
+<div class="space-filler"></div>
