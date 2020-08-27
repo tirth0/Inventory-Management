@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://127.0.0.1:27017/test'
+const MONGO_URI = 'mongodb+srv://Tirtharaj:pukai007@cluster0.t7zhe.mongodb.net/inventory?retryWrites=true&w=majority
+ 
 mongoose.Promise = global.Promise;
 mongoose.set('debug', true);
 
